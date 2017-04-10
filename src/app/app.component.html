@@ -1,3 +1,32 @@
 <h1>
   {{title}}
 </h1>
+<table>
+<tr>
+<td> Name: {{name}} - {{description}} </td>
+</tr>
+<tr>
+<td> Price : {{price}} </td>
+</tr>
+<tr>
+<td> Category : {{categoryName}} </td>
+</tr>
+<tr>
+<td> IsAvailable : {{isAvailable}} </td>
+</tr>
+<tr>
+<td> Contents:
+<li *ngFor="let item of contents">{{item}}</li>
+</td>
+</tr>
+<tr>
+<td> Products:
+<li *ngFor="let product of products">{{product}}</li>
+</td>
+</tr>
+</table>
+<button (click)="onBuy()">Buy</button>
+ <div *ngIf="isAvailable">This product is available</div>
+
+ <app-product-list>
+ </app-product-list>
